@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code.json",
+  "_note": "Claude Code 設定サンプル。EDITME: このファイルを settings.local.json にコピーして使う（.gitignore 対象）。実キーは ${ENV_VAR} 参照のみ。",
+
+  "env": {
+    "_note": "環境変数は実値を書かず ${引用} 形式にする。例: APITOKEN は .env から読み込む",
+    "WORKSPACE_ROOT": "${HOME}/your-project"
+  },
+
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(git status)",
+      "Bash(git diff:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf /*)",
+      "Bash(git push --force)"
+    ]
+  },
+
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash scripts/lint-secrets.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

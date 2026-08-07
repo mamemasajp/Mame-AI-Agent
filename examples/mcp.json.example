@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schemastore.org/mcp.schema.json",
+  "_note": "MCP サーバー設定のサンプル。EDITME: 実キーは含めない。実鍵は ${ENV_VAR} 参照で環境変数から。本サンプルは無効(disabled:false にしない)状態で配布。",
+  "mcpServers": {
+    "filesystem": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "${WORKSPACE_ROOT}"],
+      "_note": "ファイルシステム操作。WORKSPACE_ROOT は環境変数で設定する。"
+    },
+    "github": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "_note": "GitHub API。トークンは実値を書かず ${GITHUB_TOKEN} のみ。"
+    },
+    "example-secret-server": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "some-server"],
+      "env": {
+        "API_KEY": "${MY_API_KEY}"
+      },
+      "disabled": true,
+      "_note": "実キーが必要なサーバーの例は、これを参考に ${ENV_VAR} 参照のみで追加する。"
+    }
+  }
+}

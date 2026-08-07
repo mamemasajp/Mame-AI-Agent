@@ -1,0 +1,37 @@
+# ============================================================
+# ai-agent-starter — 秘密情報の漏洩防止 (gitignore)
+# 方針: 設定サンプル・ルール・スキルは追跡
+#       実キー・個人データ・ローカル状態は除外
+# ============================================================
+
+# --- 絶対機密（実APIキー・トークン・秘密鍵） ---
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+*keystore*
+.ghost-token
+
+# --- ローカルランタイム / 状態（エージェント自動管理） ---
+sessions/
+session-env/
+shell-snapshots/
+history.jsonl
+**/__pycache__/
+*.pyc
+node_modules/
+
+# --- 一時ファイル ---
+tmp_*
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# --- install.sh の生成物（単一情報源は skills/ 。.claude/skills と .github/skills は再生成） ---
+.claude/skills/
+.github/skills/
