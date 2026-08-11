@@ -38,7 +38,7 @@ HOME_PATH_PATTERN='/home/[A-Za-z0-9_.-]+|/Users/[A-Za-z0-9_.-]+|/mnt/c/Users/[A-
 # 注: 本スクリプト自身を除外（自ソースのパターン文字列に自己一致するため）
 SELF="scripts/lint-secrets.sh"
 if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-  FILES="$(git ls-files | grep -v '^\.git' | grep -v "^$SELF$")"
+  FILES="$(git ls-files | grep -v '^\.git/' | grep -v "^$SELF$")"
 fi
 # 未コミット/非git: find フォールバック（空のまま grep が stdin を読むのを防ぐ）
 if [ -z "${FILES:-}" ]; then
