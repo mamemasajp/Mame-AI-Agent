@@ -33,6 +33,8 @@ Claude Code・GitHub Copilot CLI・Codex・Cursor など、エージェントに
 
 インストールは「コピー」なので、スキル正本 `skills/<name>/SKILL.md` を編集すれば再実行で再配置できます。
 
+**Windows（PowerShell）の場合**: 上記スクリプトは bash 前提です。[Git for Windows](https://gitforwindows.org/) の **Git Bash** で `bash scripts/install.sh copilot` を実行してください。配置後は Copilot CLI を再起動、または `/skills reload` を実行します。
+
 ### ルール・規範の取り込み
 
 - **Claude Code**: `CLAUDE.md` と `.claude/rules/*.md` をプロジェクトへコピー。
