@@ -140,6 +140,3 @@ description: JTBDベース構造化インタビュースクリプト作成 - 採
 | Notion/Google Docs | スクリプト共有・共同編集・評価シート |
 | ATS (Greenhouse/Lever) | 採用面接・評価連携 |
 
----
-
-*移行日: 2026-07-27 | 元: CmdC interview-script skill*

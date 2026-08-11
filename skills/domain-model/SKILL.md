@@ -147,6 +147,3 @@ graph LR
 | `--validate` | 整合性検証実行 |
 | `--team` | チーム別フィルタ |
 
----
-
-*移行日: 2026-07-27 | 元: CmdC domain-modeling skill*

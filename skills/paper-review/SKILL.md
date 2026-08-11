@@ -214,6 +214,3 @@ description: 学術論文多視点査読シミュレーション - 5人格レビ
 | `/write` | Rebuttal・Response letter執筆支援 |
 | OpenReview/ CMT | 実査読プラットフォーム連携 |
 
----
-
-*移行日: 2026-07-27 | 元: CmdC academic-paper-reviewer skill*

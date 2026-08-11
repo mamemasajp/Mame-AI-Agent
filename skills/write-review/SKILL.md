@@ -6,7 +6,7 @@ description: マルチ視点ライティングレビュー - 品質・論理・�
 # /write-review - マルチ視点ライティングレビュー
 
 ## 概要
-文章を**複数の独立した視点**で体系的にレビューし、修正箇所を特定する。academic-research-skillsのmulti-perspective review + integrity gateをCmdC向けに最適化。
+文章を**複数の独立した視点**で体系的にレビューし、修正箇所を特定する。academic-research-skillsのmulti-perspective review + integrity gateをベースに最適化。
 
 ## レビュー視点（5視点 × 独立実行）
 
@@ -148,6 +148,3 @@ description: マルチ視点ライティングレビュー - 品質・論理・�
 - **実行可能性**: 指摘に具体的改善案・修正箇所付与
 - **学習**: ユーザー修正パターンを蓄積し精度向上
 
----
-
-*統合日: 2026-07-27 | 移行: CmdC→Claude Code*
