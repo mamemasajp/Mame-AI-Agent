@@ -122,6 +122,3 @@ description: コードベース設計語彙 - 深層モジュール・インタ�
 | `/simplify` | 過剰複雑化の検出・簡略化 |
 | `code-review-graph` MCP | 依存グラフ・コミュニティ分析 |
 
----
-
-*移行日: 2026-07-27 | 元: CmdC codebase-design skill*

@@ -160,6 +160,3 @@ description: インタビュー文字起こし→JTBD・満足度シグナル・
 | Notion/Linear/Jira | アクションアイテム自動チケット化 |
 | Productboard/Pendo | インサイト蓄積・優先度付け |
 
----
-
-*移行日: 2026-07-27 | 元: CmdC summarize-interview skill*

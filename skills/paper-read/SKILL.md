@@ -171,6 +171,3 @@ description: 論文理解スケルトン駆動型 - 問題→手法→実験→�
 | Obsidian | ナレッジグラフ・バックリンク・検索 |
 | Zotero/Notion | 文献管理・メモ同期 |
 
----
-
-*移行日: 2026-07-27 | 元: CmdC paper-read skill*
