@@ -67,4 +67,4 @@ MIT（[LICENSE](LICENSE)）。スキル・ルールも自由に利用・改変�
 ## 参照
 
 - 構造索引: [`MAP.md`](MAP.md)
-- 公式サンプル風スキル: `skills/english/`（「理解のズレ言語化」学習ループの汎用テンプレート）
+- スキル例: `templates/skill/SKILL.md` を参考に `skills/<name>/SKILL.md` を作成して追加
