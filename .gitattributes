@@ -1,0 +1,3 @@
+# WSL（LF）と Windows（CRLF）間の行末差異を防ぐ
+*.sh text eol=lf
+*.md text
