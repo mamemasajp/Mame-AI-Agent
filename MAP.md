@@ -15,7 +15,7 @@
 | **.github/skills/** | install.sh で生成（Copilot 用配置先） | `Skill` ツール | GitHub Copilot CLI |
 | **templates/** | 新規 skill / rule 作成テンプレート | 手動 | 全エージェント |
 | **examples/** | MCP / hooks 設定サンプル（無効・{ENV}参照のみ） | 手動 | 全エージェント |
-| **optional/** | セッションワークフロー3種（Claude Code 個人運用・既定展開なし） | 手動（cp） | Claude Code |
+| **optional/** | セッションワークフロー・Inbox整理・Obsidianリファレンス（Claude Code 個人運用・既定展開なし） | 手動（cp） | Claude Code |
 | **scripts/** | install.sh / lint-secrets.sh | CLI | 全エージェント |
 | **.github/workflows/** | CI（秘密漏洩チェック） | push 時 | CI |
 
@@ -26,7 +26,7 @@
 - **README.md** → scripts/install.sh、AGENTS.md、MAP.md、optional/
 - **scripts/install.sh** → skills/<name>/SKILL.md → .claude/skills/ または .github/skills/（optional/ は対象外）
 - **scripts/lint-secrets.sh** → リポジトリ全体（秘密検出）+ CI
-- **optional/** → 個人運用セッションワークフロー（`{USER}` / `${OBSIDIAN_VAULT}` プレースホルダ。手動コピーで導入）
+- **optional/** → 個人運用セッションワークフロー・Inbox整理・Obsidianリファレンス（`{USER}` / `${OBSIDIAN_VAULT}` プレースホルダ。手動コピーで導入）
 
 ## 秘密・個人情報ポリシー
 

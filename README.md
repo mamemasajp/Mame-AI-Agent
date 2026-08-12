@@ -15,7 +15,7 @@ Claude Code・GitHub Copilot CLI・Codex・Cursor など、エージェントに
 | [`templates/`](templates/) | 全エージェント | 新規 skill / rule 作成テンプレート |
 | [`scripts/`](scripts/) | 全エージェント | インストール・秘密漏洩チェック |
 | [`examples/`](examples/) | 全エージェント | MCP / hooks 設定サンプル（無効・{ENV}参照のみ） |
-| [`optional/`](optional/) | Claude Code（個人運用） | セッションワークフロー3種（既定インストール対象外・手動） |
+| [`optional/`](optional/) | Claude Code（個人運用） | セッションワークフロー・Inbox整理・Obsidianリファレンス（既定インストール対象外・手動） |
 
 ## クイックスタート
 
@@ -75,6 +75,9 @@ CI 上でも実行されます（`.github/workflows/lint-secrets.yml`）。
 | [`optional/session-kickoff/`](optional/session-kickoff/) | セッション冒頭のキックオフ（ゴール→WBS→並列リサーチ→プラン→引継ぎ→Go待ち） |
 | [`optional/mid-point/`](optional/mid-point/) | 調査→実装を別セッションへ分ける中継保存 |
 | [`optional/session-end/`](optional/session-end/) | セッション終了儀式（commit/push + 記憶保存 + 状態更新） |
+| [`optional/oreport/`](optional/oreport/) | セッション終了レポート（複雑セッションの議事録） |
+| [`optional/inbox-organize/`](optional/inbox-organize/) | Obsidian Inbox 整理（00-Inbox → PARA） |
+| [`optional/obsidian-notetaking/`](optional/obsidian-notetaking/) | Obsidian 運用方法の抽象化リファレンス（参照ドキュメント） |
 
 詳しい導入・プレースホルダ設定は [`optional/README.md`](optional/README.md) を参照してください。
 これらは個人情報（`{USER}`・絶対パス）をプレースホルダ化して収録しており、自分の環境で使う前に実値へ置き換えます。
