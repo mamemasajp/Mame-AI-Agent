@@ -15,6 +15,7 @@
 | [`oreport/`](oreport/) | セッション終了レポート（複雑セッションの議事録。`session-end` の後段オプション） |
 | [`inbox-organize/`](inbox-organize/) | Obsidian Inbox 整理（00-Inbox → PARA へ内容確認して自動振り分け） |
 | [`obsidian-notetaking/`](obsidian-notetaking/) | Obsidian 運用方法の抽象化リファレンス（PARA/命名/frontmatter を汎用化）※スキルではなく参照ドキュメント |
+| [`arch-design/`](arch-design/) | アーキテクチャ・アルゴリズム設計（＋実装計画書）を「決定解決ループ」で固め、低認知負荷文書として出力。汎用RAG設計を内蔵 |
 
 ## 依存（任意・Claude Code 前提）
 
@@ -51,7 +52,7 @@ cp -r optional/session-end ~/.claude/skills/
 
 # 例: セッションワークフロー一式をまとめて配置
 cp -r optional/session-kickoff optional/mid-point optional/session-end \
-      optional/oreport optional/inbox-organize ~/.claude/skills/
+      optional/oreport optional/inbox-organize optional/arch-design ~/.claude/skills/
 ```
 
 配置後、`--` 冒頭のプレースホルダ（`{USER}` / `${OBSIDIAN_VAULT}`）を自分の実値へ置き換えてください。

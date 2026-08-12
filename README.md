@@ -78,6 +78,7 @@ CI 上でも実行されます（`.github/workflows/lint-secrets.yml`）。
 | [`optional/oreport/`](optional/oreport/) | セッション終了レポート（複雑セッションの議事録） |
 | [`optional/inbox-organize/`](optional/inbox-organize/) | Obsidian Inbox 整理（00-Inbox → PARA） |
 | [`optional/obsidian-notetaking/`](optional/obsidian-notetaking/) | Obsidian 運用方法の抽象化リファレンス（参照ドキュメント） |
+| [`optional/arch-design/`](optional/arch-design/) | アーキテクチャ・アルゴリズム設計（決定解決ループ + 低認知負荷文書、汎用RAG設計内蔵） |
 
 詳しい導入・プレースホルダ設定は [`optional/README.md`](optional/README.md) を参照してください。
 これらは個人情報（`{USER}`・絶対パス）をプレースホルダ化して収録しており、自分の環境で使う前に実値へ置き換えます。
