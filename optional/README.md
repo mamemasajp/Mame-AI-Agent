@@ -12,10 +12,13 @@
 | [`session-kickoff/`](session-kickoff/) | セッション冒頭のキックオフ（ゴール設定→WBS→並列リサーチ→プラン策定→引継ぎ→Go待ち） |
 | [`mid-point/`](mid-point/) | 調査→実装を別セッションへ分ける中継保存。コンテキスト圧迫時の引き継ぎ |
 | [`session-end/`](session-end/) | セッション終了儀式（git commit/push + 記憶保存 + セッション状態更新） |
+| [`oreport/`](oreport/) | セッション終了レポート（複雑セッションの議事録。`session-end` の後段オプション） |
+| [`inbox-organize/`](inbox-organize/) | Obsidian Inbox 整理（00-Inbox → PARA へ内容確認して自動振り分け） |
+| [`obsidian-notetaking/`](obsidian-notetaking/) | Obsidian 運用方法の抽象化リファレンス（PARA/命名/frontmatter を汎用化）※スキルではなく参照ドキュメント |
 
 ## 依存（任意・Claude Code 前提）
 
-- 3スキルは **Claude Code** 固有（`claude -n`、`/rename`、`AskUserQuestion`、Task 並列等を参照）。
+- スキル群は **Claude Code** 固有（`claude -n`、`/rename`、`AskUserQuestion`、Task 並列等を参照）。
 - `session-kickoff` / `mid-point` は並列リサーチに **サブエージェント**（`research` 等）と、状態管理に **Obsidian** の `sessions/` + `session-router.md` を想定。
 - `session-end` は記憶保存に **MCP**（例: `mnemon` / `cmdc-mnemonic`）を任意依存として利用（無ければスキップ）。
 - すべて **必須ではない**。使わない連携は該当フェーズをスキップして動作します。
@@ -46,8 +49,9 @@
 # 例: session-end を配置
 cp -r optional/session-end ~/.claude/skills/
 
-# 例: 3つまとめて配置
-cp -r optional/session-kickoff optional/mid-point optional/session-end ~/.claude/skills/
+# 例: セッションワークフロー一式をまとめて配置
+cp -r optional/session-kickoff optional/mid-point optional/session-end \
+      optional/oreport optional/inbox-organize ~/.claude/skills/
 ```
 
 配置後、`--` 冒頭のプレースホルダ（`{USER}` / `${OBSIDIAN_VAULT}`）を自分の実値へ置き換えてください。
