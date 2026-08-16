@@ -1,4 +1,4 @@
-# ai-agent-starter
+# Mame-AI-Agent
 
 **どの AI Agent でも・誰でも使える、安心安全な AI エージェント運用スターターキット。**
 
