@@ -3,9 +3,10 @@
 # install.sh — スキル正本 skills/<name>/SKILL.md を各エージェントの配置先へコピー
 #
 # 使い方:
-#   scripts/install.sh claude           # .claude/skills/ へ配置（Claude Code）
-#   scripts/install.sh copilot          # .github/skills/ へ配置（GitHub Copilot CLI）
-#   scripts/install.sh --dry-run claude # 何が配置されるか確認のみ
+#   scripts/install.sh claude             # .claude/skills/ へ配置（Claude Code）
+#   scripts/install.sh copilot            # .github/skills/ へ配置（GitHub Copilot CLI: プロジェクト用）
+#   scripts/install.sh copilot-personal   # ~/.copilot/skills/ へ配置（Copilot CLI: 個人用）
+#   scripts/install.sh --dry-run claude   # 何が配置されるか確認のみ
 #
 # 方針: 正本 skills/ は単一情報源。.claude/skills と .github/skills はコピーで再生成する（手動編集禁止）。
 
@@ -19,10 +20,11 @@ DRY=0
 
 TARGET_ARG="${1:-}"
 case "$TARGET_ARG" in
-  claude)  DEST=".claude/skills" ;;
-  copilot) DEST=".github/skills" ;;
+  claude)           DEST=".claude/skills" ;;
+  copilot)          DEST=".github/skills" ;;
+  copilot-personal) DEST="$HOME/.copilot/skills" ;;
   *)
-    echo "usage: $0 [--dry-run] <claude|copilot>" >&2
+    echo "usage: $0 [--dry-run] <claude|copilot|copilot-personal>" >&2
     exit 2
     ;;
 esac
