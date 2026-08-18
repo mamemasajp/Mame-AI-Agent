@@ -24,8 +24,11 @@ Claude Code・GitHub Copilot CLI・Codex・Cursor など、エージェントに
 # Claude Code 用に .claude/skills/ へ配置
 ./scripts/install.sh claude
 
-# GitHub Copilot CLI 用に .github/skills/ へ配置
+# GitHub Copilot CLI（プロジェクト用）に .github/skills/ へ配置
 ./scripts/install.sh copilot
+
+# GitHub Copilot CLI（個人用）に ~/.copilot/skills/ へ配置
+./scripts/install.sh copilot-personal
 
 # dry-run（何が配置されるか確認のみ）
 ./scripts/install.sh --dry-run claude
@@ -33,7 +36,24 @@ Claude Code・GitHub Copilot CLI・Codex・Cursor など、エージェントに
 
 インストールは「コピー」なので、スキル正本 `skills/<name>/SKILL.md` を編集すれば再実行で再配置できます。
 
-**Windows（PowerShell）の場合**: 上記スクリプトは bash 前提です。[Git for Windows](https://gitforwindows.org/) の **Git Bash** で `bash scripts/install.sh copilot` を実行してください。配置後は Copilot CLI を再起動、または `/skills reload` を実行します。
+**Windows（PowerShell）の場合**: 上記スクリプトは bash 前提です。[Git for Windows](https://gitforwindows.org/) の **Git Bash** で `bash scripts/install.sh copilot`（または `copilot-personal`）を実行してください。配置後は Copilot CLI を再起動、または `/skills reload` を実行します。
+
+### Copilot CLI の個人スキル配置先（`~/.copilot/skills/`）
+
+ローカルにクラウドセットアップせず、個人スキルを直接置きたい場合は `~/.copilot/skills/` が GitHub Copilot CLI の**公式の個人配置先**です。`install.sh copilot-personal` を実行するとスキル正本をここへコピーします。手動でも配置できます:
+
+```bash
+# 手動（install.sh を使わない場合）
+mkdir -p ~/.copilot/skills/my-skill
+cp skills/my-skill/SKILL.md ~/.copilot/skills/my-skill/
+
+# または Copilot CLI の公式導入コマンド（ファイル / URL / ディレクトリ）
+copilot skill add skills/my-skill        # 特定のスキルディレクトリを導入
+# または gh からマーケットプレイスのスキルを導入
+gh skill install <owner>/<repo>:<name>
+```
+
+導入後は `/skills reload` で読み込み、`/skills list` / `/skills info SKILL-NAME` で確認できます。配置したくないスキルは `~/.copilot/settings.json` の `disabledSkills` キーで個別に無効化できます。補足: リポジトリ内の `.github/skills/` は**プロジェクト単位**の配置先で、個人 `~/.copilot/skills/`（または代替 `~/.agents/skills/`）とは別の層です。
 
 ### ルール・規範の取り込み
 
